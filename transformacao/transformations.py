@@ -6,7 +6,7 @@ import maior_intencidade
 def log_proces():
     
     try:
-        constante = int(input())
+        constante = float(input("Informe o valor da constante: "))
     except:
         return 0    
 
@@ -39,8 +39,8 @@ def exponential():
         sys.exit("Could not read the image.")
 
     try:
-        constante = int(input())
-        exponente = int(input())
+        constante = int(input("Informe o valor da constante: "))
+        exponente = float(input("Informe o valor do expoente: "))
     except:
         return 0   
 
