@@ -7,14 +7,21 @@ while opt!=0:
     print('2 - Exponencial')
     print('3 - Inverso')
     print('0 - Sair')
-    opt = int(input())
+    try:
+        opt = int(input())
+    except:
+        print("")
     if opt==1:
         re = transformations.log_proces()
         if re == 0:
             print("Informe um valor válido.")
-    if opt == 2:
+    elif opt == 2:
         re = transformations.exponential()
         if re == 0:
             print("Informe um valor válido.")
-    if opt == 3:
+    elif opt == 3:
         transformations.inversa()
+    elif opt == 0:
+        break
+    else:
+        print("Informe um valor válido")
