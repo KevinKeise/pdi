@@ -5,12 +5,16 @@ import maior_intencidade
 
 def log_proces():
     
+    try:
+        constante = int(input())
+    except:
+        return 0    
+
     img = cv.imread(cv.samples.findFile("imagem-preto-branco.jpg"), 2)
     if img is None:
         sys.exit("Could not read the image.")
     
     #constante = int(255/(math.log10(1 + maior_intencidade.get_max_intensity(img))))
-    constante = 50  #aqui é a constante
 
     for x in range(img.shape[0]):
         for y in range(img.shape[1]):
@@ -24,6 +28,8 @@ def log_proces():
     k = cv.waitKey(0)
     if k == ord("s"):
         cv.imwrite("imagem-preto-branco-transormada.png", img)
+
+    return 1
 
 
 def exponential():

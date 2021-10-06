@@ -9,7 +9,9 @@ while opt!=0:
     print('0 - Sair')
     opt = int(input())
     if opt==1:
-        transformations.log_proces()
+        re = transformations.log_proces()
+        if re == 0:
+            print("Informa um valor válido.")
     if opt == 2:
         transformations.exponential()
     if opt == 3:
