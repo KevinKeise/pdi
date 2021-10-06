@@ -10,7 +10,7 @@ def log_proces():
     except:
         return 0    
 
-    img = cv.imread(cv.samples.findFile("imagem-preto-branco.jpg"), 2)
+    img = cv.imread(cv.samples.findFile("imagem-teste1.jpg"), 2)
     if img is None:
         sys.exit("Could not read the image.")
     
@@ -27,14 +27,14 @@ def log_proces():
     cv.imshow("Display window", img)
     k = cv.waitKey(0)
     if k == ord("s"):
-        cv.imwrite("imagem-preto-branco-transormada.png", img)
+        cv.imwrite("imagem-teste-logaritmica.png", img)
 
     return 1
 
 
 def exponential():
     
-    img = cv.imread(cv.samples.findFile("image-teste.jpg"), 2)
+    img = cv.imread(cv.samples.findFile("image-teste1.jpg"), 2)
     if img is None:
         sys.exit("Could not read the image.")
 
@@ -55,12 +55,12 @@ def exponential():
     cv.imshow("Display window", img)
     k = cv.waitKey(0)
     if k == ord("s"):
-        cv.imwrite("image-teste-expo.png", img)
+        cv.imwrite("image-teste-exponecial.png", img)
     
     return 1
 
 def inversa():
-    img = cv.imread(cv.samples.findFile("imagem-preto-branco.jpg"), 2)
+    img = cv.imread(cv.samples.findFile("imagem-teste1.jpg"), 2)
     if img is None:
         sys.exit("Could not read the image.")
     
@@ -71,5 +71,5 @@ def inversa():
     cv.imshow("Display window", img)
     k = cv.waitKey(0)
     if k == ord("s"):
-        cv.imwrite("image-teste-expo.png", img)
+        cv.imwrite("image-teste-inversa.png", img)
     
