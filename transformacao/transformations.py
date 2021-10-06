@@ -3,7 +3,7 @@ import cv2 as cv
 import sys
 import maior_intencidade
 
-def log_proces():
+def transformacao_logaritmica():
     
     try:
         constante = float(input("Informe o valor da constante: "))
@@ -32,7 +32,7 @@ def log_proces():
     return 1
 
 
-def exponential():
+def transformacao_exponential():
     
     img = cv.imread(cv.samples.findFile("image-teste1.jpg"), 2)
     if img is None:
@@ -59,7 +59,7 @@ def exponential():
     
     return 1
 
-def inversa():
+def transformacao_inversa():
     img = cv.imread(cv.samples.findFile("imagem-teste1.jpg"), 2)
     if img is None:
         sys.exit("Could not read the image.")
