@@ -11,8 +11,10 @@ while opt!=0:
     if opt==1:
         re = transformations.log_proces()
         if re == 0:
-            print("Informa um valor válido.")
+            print("Informe um valor válido.")
     if opt == 2:
-        transformations.exponential()
+        re = transformations.exponential()
+        if re == 0:
+            print("Informe um valor válido.")
     if opt == 3:
         transformations.inversa()
