@@ -15,4 +15,4 @@ for x in range(img.shape[0]):
         else:
             img[x,y] = p
     
-cv.imwrite("imagem-logaritmica.png", img)
+cv.imwrite("imagem-logaritmica.png", img) #imagem de saída
